@@ -34,6 +34,14 @@ pipeline {
                 bat 'npm run build'
             }
         }
+        
+        stage('Check Docker') {
+            steps {
+                 bat 'where docker'
+                 bat 'docker --version'
+                 bat 'docker info'
+          }
+        }
 
         stage('5. Docker Build') {
             steps {
