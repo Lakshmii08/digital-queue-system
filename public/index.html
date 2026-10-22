@@ -1,0 +1,37 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Digital Queue Management</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+    <h1>Digital Queue Management</h1>
+    <p>Generate your token and track the queue.</p>
+
+    <form id="token-form">
+      <input id="name" placeholder="Enter your name" required>
+      <select id="department">
+        <option>General Enquiry</option>
+        <option>Accounts</option>
+        <option>Admissions</option>
+      </select>
+      <button type="submit">Generate Token</button>
+    </form>
+
+    <section class="current">
+      <h2>Now Serving</h2>
+      <p id="current-token">No token currently serving</p>
+    </section>
+
+    <h2>Queue</h2>
+    <button id="next-button">Call Next Token (Admin)</button>
+    <p id="message" role="status"></p>
+    <ul id="queue-list"></ul>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
